@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from "../assests/logos/image.png"
+import { Link } from 'react-router-dom'
 
 export default function Signin() {
     return (
@@ -107,9 +108,9 @@ export default function Signin() {
                             </button>
                             <div className="text-sm font-medium text-base-content">
                                 Not registered?{" "}
-                                <a href="/signup" className="text-primary hover:underline">
+                                <Link href="/signup" className="text-primary hover:underline">
                                     Create account
-                                </a>
+                                </Link>
                             </div>
                         </form>
                     </div>
