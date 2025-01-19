@@ -1,9 +1,11 @@
 import React from 'react'
 import logo from "../assests/logos/image.png"
 
-export default function Signin() {
+
+export default function Signup() {
     return (
         <div>
+
             <div className="flex flex-col justify-center items-center px-6 mx-auto mb-10">
                 <a href="/" className="justify-center items-center mb-8 text-2xl font-semibold lg:mb-10">
                     <img src={logo} className="mr-4 h-52" alt=" Logo" />
@@ -63,6 +65,34 @@ export default function Signin() {
                             </a>
                         </div>
                         <form className="mt-8 space-y-6">
+                            <div className="grid grid-cols-2 gap-4 items-center justify-end">
+                                <div className=''>
+                                    <label htmlFor="firstName" className="block mb-2 text-sm font-medium text-base-content">
+                                        First Name
+                                    </label>
+                                    <input
+                                        type="text"
+                                        name="firstName"
+                                        id="firstName"
+                                        className="input input-bordered w-full rounded-lg"
+                                        placeholder="First Name"
+                                        required
+                                    />
+                                </div>
+                                <div>
+                                    <label htmlFor="lastName" className=" mb-2 text-sm font-medium text-base-content">
+                                        Last Name
+                                    </label>
+                                    <input
+                                        type="text"
+                                        name="lastName"
+                                        id="lastName"
+                                        className="input input-bordered w-full rounded-lg"
+                                        placeholder="Last Name"
+                                        required
+                                    />
+                                </div>
+                            </div>
                             <div>
                                 <label htmlFor="email" className="block mb-2 text-sm font-medium text-base-content">
                                     Your email
@@ -89,32 +119,34 @@ export default function Signin() {
                                     required
                                 />
                             </div>
-                            <div className="flex items-start">
-                                <div className="flex items-center h-5">
-                                    <input id="remember" name="remember" type="checkbox" className="checkbox" />
-                                </div>
-                                <div className="ml-3 text-sm">
-                                    <label htmlFor="remember" className="font-medium text-base-content">
-                                        Remember me
-                                    </label>
-                                </div>
-                                <a href="#" className="ml-auto text-sm text-primary hover:underline">
-                                    Lost Password?
-                                </a>
+                            <div>
+                                <label htmlFor="password" className="block mb-2 text-sm font-medium text-base-content">
+                                    Confirm password
+                                </label>
+                                <input
+                                    type="password"
+                                    name="password"
+                                    id="password"
+                                    placeholder="••••••••"
+                                    className="input input-bordered w-full rounded-lg active:outline-[#1563df]"
+                                    required
+                                />
                             </div>
                             <button type="submit" className="btn btn-primary w-full text-white bg-[#1563DF] text-lg rounded-lg">
-                                Login to your account
+                                Create account
                             </button>
                             <div className="text-sm font-medium text-base-content">
-                                Not registered?{" "}
-                                <a href="/signup" className="text-primary hover:underline">
-                                    Create account
+                                already have an Account?{" "}
+                                <a href="/signIN" className="text-primary hover:underline">
+                                    Sign In
                                 </a>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
+
+
         </div>
     )
 }
