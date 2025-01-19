@@ -1,5 +1,6 @@
 
 .nav li a,
+.nav li span,
 .nav summary {
 
   background-color: transparent !important;
