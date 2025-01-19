@@ -1,0 +1,17 @@
+
+.nav li a,
+.nav summary {
+
+  background-color: transparent !important;
+  color: black !important;
+  font-weight: 500;
+  margin: 0 10px;
+
+}
+
+.nav li:hover {
+  border-radius: 10px;
+  background-color: #c8ddffd3;
+}
+
+
