@@ -47,7 +47,7 @@ export default function Navbar() {
                         </ul>
                     </div>
                     <img className="w-40" src={logo} alt='RE' />
-                    <a className="btn btn-ghost text-xl">RE Ventures</a>
+                    <a href='#!' className="btn btn-ghost text-xl">RE Ventures</a>
                 </div>
 
 
@@ -71,12 +71,12 @@ export default function Navbar() {
                 </div>
 
                 <div className="navbar-end mr-4">
-                    <Link to="/signin" className="btn bg-white font-black font-semibold text-lg border-[#1563DF] rounded-3xl hover:bg-[#1563DF] hover:text-white">
+                    <Link to="/signin" className="btn bg-white font-black text-lg border-[#1563DF] rounded-3xl hover:bg-[#1563DF] hover:text-white">
                         <VscAccount className='text-2xl' /> Sign in</Link>
                 </div>
 
                 <div className="navbar-start">
-                    <a className="btn btn-primary rounded-2xl text-white font-semibold text-lg  rounded-3xl">
+                    <a href='#!' className="btn btn-primary  text-white font-semibold text-lg  rounded-3xl">
                         <SiBookstack className='text-2xl' />
                         Submit Properties</a>
                 </div>

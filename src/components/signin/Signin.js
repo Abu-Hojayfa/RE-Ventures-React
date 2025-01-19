@@ -15,7 +15,7 @@ export default function Signin() {
                         <h2 className="text-2xl font-bold text-base-content">Sign in to platform</h2>
                         <div className="grid grid-cols-3 gap-3 mt-6">
                             <a
-                                href="#"
+                                href="#!"
                                 className="inline-flex justify-center w-full px-5 py-2.5 text-sm font-medium text-blue-600 border border-gray-200 rounded-lg shadow-sm hover:bg-gray-50"
                             >
                                 <svg
@@ -31,7 +31,7 @@ export default function Signin() {
                                 </svg>
                             </a>
                             <a
-                                href="#"
+                                href="#!"
                                 className="inline-flex justify-center w-full px-5 py-2.5 text-sm font-medium text-red-600 border border-gray-200 rounded-lg shadow-sm hover:bg-gray-50"
                             >
                                 <svg
@@ -47,7 +47,7 @@ export default function Signin() {
                                 </svg>
                             </a>
                             <a
-                                href="#"
+                                href="#!"
                                 className="inline-flex justify-center w-full px-5 py-2.5 text-sm font-medium text-blue-500 border border-gray-200 rounded-lg shadow-sm hover:bg-gray-50"
                             >
                                 <svg
@@ -99,7 +99,7 @@ export default function Signin() {
                                         Remember me
                                     </label>
                                 </div>
-                                <a href="#" className="ml-auto text-sm text-primary hover:underline">
+                                <a href="#!" className="ml-auto text-sm text-primary hover:underline">
                                     Lost Password?
                                 </a>
                             </div>
