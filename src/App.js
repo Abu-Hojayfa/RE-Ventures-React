@@ -5,7 +5,7 @@ import Home from './components/home/Home';
 import Footer from './components/footer/Footer';
 import Signin from './components/signin/Signin';
 import Signup from './components/signin/Signup';
-import OurService from './components/oursService/OurService';
+import OurService from './components/pages/oursService/OurService';
 
 function App() {
   return (

@@ -1,9 +1,9 @@
 import React from 'react'
 import './ourservice.css'
 import { FaArrowRight } from "react-icons/fa";
-import sell from '../../assets/sell.jpg'
-import buy from '../../assets/buy.jpg'
-import rent from '../../assets/rent.jpg'
+import sell from '../../../assests/service/sell.jpg'
+import buy from '../../../assests/service/sell.jpg'
+import rent from '../../../assests/service/sell.jpg'
 
 
 export default function OurService() {
@@ -38,7 +38,51 @@ export default function OurService() {
             </div>
 
             <div className="flex justify-center items-center mt-5">
-                
+
+                <div className="card bg-base-100 w-96 cursor-pointer transition ease-in-out duration-700 border rounded-2xl border-gray-300 hover:shadow-2xl hover:border-transparent serviceDaddy">
+                    <figure className="px-10 pt-10">
+                        <img
+                            src={buy}
+                            alt="Shoes"
+                            className="rounded-xl" />
+                    </figure>
+                    <div className="card-body items-center text-center">
+                        <h2 className="card-title my-1">Buy A New Home</h2>
+                        <p className='text-gray-400'>Discover your dream home effortlessly. Explore diverse properties and expert guidance for a seamless buying experience.</p>
+
+                        <div className="card-actions mt-2">
+                            <button className="service-buton btn bg-white text-base border-[#1563DF] rounded-3xl ">Learn More  <FaArrowRight /></button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div className="flex justify-center items-center mt-5">
+
+                <div className="card bg-base-100 w-96 cursor-pointer transition ease-in-out duration-700 border rounded-2xl border-gray-300 hover:shadow-2xl hover:border-transparent serviceDaddy">
+                    <figure className="px-10 pt-10">
+                        <img
+                            src={rent}
+                            alt="Shoes"
+                            className="rounded-xl" />
+                    </figure>
+                    <div className="card-body items-center text-center">
+                        <h2 className="card-title my-1">Buy A New Home</h2>
+                        <p className='text-gray-400'>Discover your dream home effortlessly. Explore diverse properties and expert guidance for a seamless buying experience.</p>
+
+                        <div className="card-actions mt-2">
+                            <button className="service-buton btn bg-white text-base border-[#1563DF] rounded-3xl ">Learn More  <FaArrowRight /></button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div className="flex justify-center items-center mt-5">
+
                 <div className="card bg-base-100 w-96 cursor-pointer transition ease-in-out duration-700 border rounded-2xl border-gray-300 hover:shadow-2xl hover:border-transparent serviceDaddy">
                     <figure className="px-10 pt-10">
                         <img

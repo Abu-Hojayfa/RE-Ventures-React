@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assests/logos/image.png';
+import logo from '../../assests/logos/image.png';
 import { VscAccount } from "react-icons/vsc";
 import { SiBookstack } from "react-icons/si";
 import './Navbar.css'
