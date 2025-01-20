@@ -90,13 +90,11 @@ export default function Signin() {
                                     required
                                 />
                             </div>
-                            <div className="flex items-start">
-                                <div className="flex items-center h-5">
-                                    <input id="remember" name="remember" type="checkbox" className="checkbox" />
-                                </div>
-                                <div className="ml-3 text-sm">
-                                    <label htmlFor="remember" className="font-medium text-base-content">
-                                        Remember me
+                            <div className="flex items-start justify-center">
+                                <div className="form-control">
+                                    <label className="cursor-pointer label py-0">
+                                        <input type="checkbox" defaultChecked className="checkbox checkbox-primary rounded-2xl mr-2 [--chkfg:white]" />
+                                        <span className="label-text">Remember me</span>
                                     </label>
                                 </div>
                                 <a href="#!" className="ml-auto text-sm text-primary hover:underline">
@@ -108,7 +106,7 @@ export default function Signin() {
                             </button>
                             <div className="text-sm font-medium text-base-content">
                                 Not registered?{" "}
-                                <Link href="/signup" className="text-primary hover:underline">
+                                <Link to="/signup" className="text-primary hover:underline">
                                     Create account
                                 </Link>
                             </div>

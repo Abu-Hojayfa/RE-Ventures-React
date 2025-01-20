@@ -36,9 +36,10 @@ export default function Navbar() {
                             <li>
                                 <details>
                                     <summary className='text-lg'>Pages</summary>
-                                    <ul className="p-2">
-                                        <li><span className='text-sm'>About</span></li>
-                                        <li><span>Contact</span></li>
+                                    <ul className="p-2 w-52">
+                                        <li><span>About Us</span></li>
+                                        <li><Link to="our-services">Our Services</Link></li>
+                                        <li><span>Contact Us</span></li>
                                         <li><span>Blog</span></li>
                                     </ul>
                                 </details>
@@ -59,9 +60,10 @@ export default function Navbar() {
                         <li>
                             <details>
                                 <summary className='text-lg'>Pages</summary>
-                                <ul className="p-2">
-                                    <li><span className='text-sm'>About</span></li>
-                                    <li><span>Contact</span></li>
+                                <ul className="p-2 w-52">
+                                    <li><span>About Us</span></li>
+                                    <li><Link to="our-services">Our Services</Link></li>
+                                    <li><span>Contact Us</span></li>
                                     <li><span>Blog</span></li>
                                 </ul>
                             </details>
@@ -71,12 +73,12 @@ export default function Navbar() {
                 </div>
 
                 <div className="navbar-end mr-4">
-                    <Link to="/signin" className="btn bg-white font-black text-lg border-[#1563DF] rounded-3xl hover:bg-[#1563DF] hover:text-white">
+                    <Link to="/signin" className="btn bg-white text-base border-[#1563DF] rounded-3xl hover:bg-[#1563DF] hover:text-white">
                         <VscAccount className='text-2xl' /> Sign in</Link>
                 </div>
 
                 <div className="navbar-start">
-                    <a href='#!' className="btn btn-primary  text-white font-semibold text-lg  rounded-3xl">
+                    <a href='#!' className="btn btn-primary  text-white text-base  rounded-3xl">
                         <SiBookstack className='text-2xl' />
                         Submit Properties</a>
                 </div>

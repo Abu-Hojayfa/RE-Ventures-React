@@ -64,6 +64,8 @@ export default function FrdProperties() {
                     </button>
                 </div>
             </div>
+
+            
         </div>
     );
 }
