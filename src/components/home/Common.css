@@ -1,0 +1,13 @@
+/* WHat we do (our service)  start*/
+.serviceDaddy:hover .service-buton {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: #1563DF;
+    color: white;
+}
+
+.service-buton {
+    transition: all 0.5s ease; 
+}
+
+/* WHat we do (our service)  end*/

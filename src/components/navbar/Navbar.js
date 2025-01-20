@@ -44,7 +44,7 @@ export default function Navbar() {
                                     </ul>
                                 </details>
                             </li>
-                            <li><span className='text-lg'>Dashboard</span></li>
+                            <li><Link to="/dashboard" className='text-lg'>Dashboard</Link></li>
                         </ul>
                     </div>
                     <img className="w-40" src={logo} alt='RE' />
@@ -68,7 +68,7 @@ export default function Navbar() {
                                 </ul>
                             </details>
                         </li>
-                        <li><span className='text-lg'>Dashboard</span></li>
+                        <li><Link to="/dashboard" className='text-lg'>Dashboard</Link></li>
                     </ul>
                 </div>
 
