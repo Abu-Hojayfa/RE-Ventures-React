@@ -1,7 +1,7 @@
 import React from "react";
 import FilterBar from "../mainDash/FilterBar";
 
-const ListingsTable = () => {
+const ListingsTable = ({ showFilter }) => {
     const listings = [
         { id: 1, name: "Gorgeous Apartment Building", status: "Approved", price: "$7,500" },
         { id: 2, name: "Mountain Mist Retreat, Aspen", status: "Approved", price: "$7,500" },
@@ -26,7 +26,7 @@ const ListingsTable = () => {
         <div className="bg-white shadow-lg rounded-lg p-4">
             <h2 className="text-2xl font-bold mb-4">New Listing</h2>
 
-            <FilterBar />
+            {showFilter ? <FilterBar /> : null}
 
             <div className="overflow-hidden rounded-xl mt-4">
                 <table className="table w-full">
