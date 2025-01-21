@@ -70,7 +70,7 @@ export default function Navbar({ hideHeaderFooter }) {
                             </li>
                         </ul>
                     </div>
-                    <img className="w-40" src={logo} alt="RE" />
+                    <img className="w-24" src={logo} alt="RE" />
                     <Link to="/" className={`btn btn-ghost text-xl ${conditioningOfHeader ? "mr-56" : ""}`}>
                         RE Ventures
                     </Link>

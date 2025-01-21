@@ -34,8 +34,8 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                     } transition-transform duration-300`}
             >
                 {/* Logo */}
-                <div className="flex items-center justify-center pt-5 border-b border-gray-500">
-                    <img src={logo} alt="logo" className="w-3/6" />
+                <div className="flex items-center justify-center pt-5 pb-2 border-b border-gray-500">
+                    <img src={logo} alt="logo" className="w-20 " />
                     <span className="text-xl font-semibold text-white mx-2">RE Ventures</span>
                 </div>
 

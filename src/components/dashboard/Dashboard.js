@@ -7,6 +7,7 @@ import MainDash from "./mainDash/MainDash.js";
 import PropertyTable from "./propertyTable/PropertyTable.js";
 import MessagesMain from "./mainDash/MessagesMain.js";
 import ReviewsPanel from "./mainDash/ReviewsMain.js";
+import Profile from "./profile/Profile.js";
 
 export default function Dashboard() {
     const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -29,6 +30,7 @@ export default function Dashboard() {
                         <Route path="/my-favorites" element={<PropertyTable showFilter={false} />} />
                         <Route path="/messages" element={<MessagesMain mainMsg={true} />} />
                         <Route path="/reviews" element={<ReviewsPanel mainReview={true} />} />
+                        <Route path="/profile" element={<Profile />} />
                     </Routes>
                 </main>
             </div>
