@@ -15,7 +15,7 @@ export default function MainDash() {
                 <SummaryCard title="Your listing" value="32" subtitle="/50 remaining" icon={LuListCheck} />
                 <SummaryCard title="Pending" value="02" icon={MdOutlinePendingActions} />
                 <SummaryCard title="Favorites" value="06" icon={LuFolderHeart} />
-                <SummaryCard title="Reviews" value="1,483" icon={MdOutlineStarOutline} />
+                <SummaryCard title="Reviews" value="4.835" icon={MdOutlineStarOutline} />
             </div>
 
             {/* Listings Table Section */}

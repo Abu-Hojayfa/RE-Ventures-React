@@ -24,17 +24,15 @@ const ListingsTable = () => {
 
     return (
         <div className="bg-white shadow-lg rounded-lg p-4">
-            
-
-            <h2 className="text-lg font-bold mb-4">New Listing</h2>
+            <h2 className="text-2xl font-bold mb-4">New Listing</h2>
 
             <FilterBar />
 
-            <div className="overflow-x-auto">
+            <div className="overflow-hidden rounded-xl mt-4">
                 <table className="table w-full">
-                    <thead>
+                    <thead className="text-white bg-[#161E2D] text-base">
                         <tr>
-                            <th>Listing</th>
+                            <th className="font-normal">Listing</th>
                             <th>Status</th>
                             <th>Action</th>
                         </tr>
@@ -50,15 +48,15 @@ const ListingsTable = () => {
                                     </div>
                                 </td>
                                 <td>
-                                    <span className={`badge ${getStatusClass(listing.status)} p-2 rounded-md`}>
+                                    <span className={`badge ${getStatusClass(listing.status)} p-2 px-4 rounded-md shadow-sm font-semibold`}>
                                         {listing.status}
                                     </span>
                                 </td>
                                 <td>
                                     <div className="flex space-x-2">
-                                        <button className="text-blue-500">Edit</button>
-                                        <button className="text-purple-500">Sold</button>
-                                        <button className="text-red-500">Delete</button>
+                                        <button className="text-blue-500 hover:underline" aria-label="Edit Listing">Edit</button>
+                                        <button className="text-purple-500 hover:underline" aria-label="Mark as Sold">Sold</button>
+                                        <button className="text-red-500 hover:underline" aria-label="Delete Listing">Delete</button>
                                     </div>
                                 </td>
                             </tr>
