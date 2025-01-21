@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 
 import Header from "./sidebar/Header.js";
-import DashboardStats from "./sidebar/DashboardStats.js";
-import UserTable from "./sidebar/UserTable.js";
 import Sidebar from "./sidebar/Sidebar.js";
+import MainDash from "./mainDash/MainDash.js";
 
 
 export default function Dashboard() {
@@ -17,11 +16,9 @@ export default function Dashboard() {
             <div className="flex h-screen bg-gray-200">
                 <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
                 <div className="flex-1 flex flex-col">
-                    <Header toggleSidebar={toggleSidebar} />
-                    <main className="p-6">
-                        <h1 className="text-3xl font-medium text-gray-700">Dashboard</h1>
-                        <DashboardStats />
-                        <UserTable />
+                    <Header  sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
+                    <main className="min-h-screen ml-64 bg-[#E5E7EB]">                        
+                        <MainDash />
                     </main>
                 </div>
             </div>

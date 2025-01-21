@@ -5,6 +5,8 @@ import { CgProfile } from "react-icons/cg";
 import { FaHeart, FaRegSquarePlus } from "react-icons/fa6";
 import { MdAddchart, MdLogout, MdContactMail, MdOutlineMessage, MdOutlineEditCalendar } from "react-icons/md";
 
+import '../common.css';
+
 const Sidebar = ({ isOpen, toggleSidebar }) => {
     const [activeTab, setActiveTab] = useState("dashboard");
 
@@ -28,7 +30,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 onClick={toggleSidebar}
             ></div>
             <div
-                className={`fixed inset-y-0 left-0 z-30 w-64 bg-[#161E2D] min-h-full transform lg:translate-x-0 lg:static ${isOpen ? "translate-x-0" : "-translate-x-full"
+                className={`dashBoardSideNav inset-y-0 left-0 z-30 w-64 bg-[#161E2D] min-h-full transform lg:translate-x-0 lg:static ${isOpen ? "translate-x-0" : "-translate-x-full"
                     } transition-transform duration-300`}
             >
                 {/* Logo */}
@@ -38,8 +40,9 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 </div>
 
                 {/* Profile Section */}
-                <div className="flex items-center gap-4 py-5 border-b border-gray-500">
-                    <CgProfile className="text-4xl text-white ml-8" />
+                <p className="text-gray-400 text-sm pt-5 px-6 pb-3">Profile</p>
+                <div className="flex items-center gap-4 pb-5 border-b border-gray-500">
+                    <CgProfile className="text-4xl text-white ml-6" />
                     <div>
                         <h4 className="text-white">John Doe</h4>
                         <p className="text-gray-400 text-sm">Owner</p>
