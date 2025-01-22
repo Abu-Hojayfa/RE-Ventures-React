@@ -26,7 +26,21 @@ export default function Header() {
           </div>
 
 
+          <div className='mx-auto'>
+            <div className='btn bg-white text-base border-[#1563DF] rounded-3xl hover:bg-[#1563DF] hover:text-white'>
+              Rent
+            </div>
+
+            <div className='btn bg-white text-base border-[#1563DF] rounded-3xl hover:bg-[#1563DF] hover:text-white'>
+              Sell
+            </div>
+          </div>
+
+
+
           <div className="flex w-4/6  mx-auto justify-evenly items-center bg-white text-black rounded-full p-3 py-4 gap-5">
+
+
 
             <div className='pr-2 border-r-2 border-gray-300'>
 
@@ -65,8 +79,8 @@ export default function Header() {
 
 
             <div className='flex justify-center items-center gap-4'>
-        
-                <AdvanceSrc />         
+
+              <AdvanceSrc />
 
 
               <div>

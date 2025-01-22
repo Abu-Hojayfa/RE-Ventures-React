@@ -4,15 +4,19 @@ export default function AmenitiesCheckboxes() {
     const amenities = [
         { name: 'Air Condition', checked: false },
         { name: 'Cable TV', checked: false },
-        { name: 'Ceiling Height', checked: false },
+        { name: 'Furnished', checked: false },
         { name: 'Fireplace', checked: false },
         { name: 'Disabled Access', checked: false },
         { name: 'Elevator', checked: false },
         { name: 'Garden', checked: false },
         { name: 'Garage', checked: false },
-        { name: 'Floor', checked: false },
+        { name: 'Security', checked: false },
         { name: 'WiFi', checked: false },
         { name: 'Swimming Pool', checked: false },
+        { name: 'Heating', checked: false },
+        { name: 'Parking', checked: false },
+        { name: 'Pet Friendly', checked: false },
+        { name: 'Intercom', checked: false },
     ];
 
     const [checkedAmenities, setCheckedAmenities] = useState(
