@@ -18,6 +18,11 @@ const FAQ = () => {
             answer:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, officia corrupti. Ullam libero eveniet quam.",
         },
+        {
+            question: "Where can I find more information?",
+            answer:
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, officia corrupti. Ullam libero eveniet quam.",
+        },
     ];
 
     return (
