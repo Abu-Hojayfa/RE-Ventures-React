@@ -5,6 +5,8 @@ import { SiBookstack } from "react-icons/si";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
+import { RiArrowDropDownLine } from "react-icons/ri";
+
 export default function Navbar({ hideHeaderFooter }) {
     const conditioningOfHeader = hideHeaderFooter === undefined || hideHeaderFooter;
     return (
@@ -31,7 +33,7 @@ export default function Navbar({ hideHeaderFooter }) {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                            className="menu menu-compact dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
                         >
                             <li>
                                 <Link to="/">
@@ -45,9 +47,18 @@ export default function Navbar({ hideHeaderFooter }) {
                                 <span className="text-lg">Listings</span>
                             </li>
                             <li>
-                                <details>
-                                    <summary className="text-lg z-50">Pages</summary>
-                                    <ul className="p-2 w-52">
+                                <div className="dropdown  p-0">
+                                    <div
+                                        tabIndex={0}
+                                        role="button"
+                                        className="btn flex items-center btn-ghost text-lg"
+                                    >
+                                        Pages <RiArrowDropDownLine className="text-3xl" />
+                                    </div>
+                                    <ul
+                                        tabIndex={0}
+                                        className="menu menu-compact dropdown-content bg-base-100 rounded-box z-[1] translate-y-32 w-52 p-2 shadow"
+                                    >
                                         <li>
                                             <Link to='/aboutus'>About Us</Link>
                                         </li>
@@ -58,7 +69,7 @@ export default function Navbar({ hideHeaderFooter }) {
                                             <Link to='/contactus'>Contact Us</Link>
                                         </li>
                                         <li>
-                                        <Link to="/blog">Blog</Link>
+                                            <Link to="/blog">Blog</Link>
                                         </li>
                                         <li>
                                             <Link to="/faqs">Faqs</Link>
@@ -67,7 +78,7 @@ export default function Navbar({ hideHeaderFooter }) {
                                             <Link to="/servicepolicy">Service Policy</Link>
                                         </li>
                                     </ul>
-                                </details>
+                                </div>
                             </li>
                             <li>
                                 <Link to="/dashboard" className="text-lg">
@@ -96,9 +107,18 @@ export default function Navbar({ hideHeaderFooter }) {
                             <span className="text-lg">Listings</span>
                         </li>
                         <li>
-                            <details>
-                                <summary className="text-lg z-50">Pages</summary>
-                                <ul className="p-2 w-52">
+                            <div className="dropdown p-0">
+                                <div
+                                    tabIndex={0}
+                                    role="button"
+                                    className="btn flex items-center btn-ghost text-lg"
+                                >
+                                    Pages <RiArrowDropDownLine className="text-3xl" />
+                                </div>
+                                <ul
+                                    tabIndex={0}
+                                    className="menu menu-compact dropdown-content bg-base-100 rounded-box z-[1] translate-y-32 w-52 p-2 shadow"
+                                >
                                     <li>
                                     <Link to='/aboutus'>About Us</Link>
                                     </li>
@@ -109,7 +129,7 @@ export default function Navbar({ hideHeaderFooter }) {
                                         <Link to='/contactus'>Contact Us</Link>
                                     </li>
                                     <li>
-                                    <Link to="/blog">Blog</Link>
+                                        <Link to="/blog">Blog</Link>
                                     </li>
                                     <li>
                                         <Link to="/faqs">Faqs</Link>
@@ -119,7 +139,7 @@ export default function Navbar({ hideHeaderFooter }) {
                                     </li>
                                     
                                 </ul>
-                            </details>
+                            </div>
                         </li>
                         <li>
                             <Link to="/dashboard" className="text-lg">

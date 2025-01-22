@@ -1,0 +1,7 @@
+.multi-range-slider .thumb::before,
+.multi-range-slider .bar-left,
+.multi-range-slider .bar-right,
+.multi-range-slider .bar-inner{
+    border: none !important;
+    box-shadow: none !important;
+}
