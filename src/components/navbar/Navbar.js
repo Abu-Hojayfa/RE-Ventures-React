@@ -125,15 +125,7 @@ export default function Navbar({ hideHeaderFooter }) {
                     </Link>
                 </div>
 
-                <div className="navbar-start">
-                    <a
-                        href="#!"
-                        className="btn btn-primary text-white text-base rounded-3xl"
-                    >
-                        <SiBookstack className="text-2xl" />
-                        Submit Properties
-                    </a>
-                </div>
+                
             </div>
         </div>
     );
