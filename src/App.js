@@ -8,6 +8,7 @@ import Signup from "./components/signin/Signup";
 import OurService from "./components/pages/oursService/OurService";
 import Dashboard from "./components/dashboard/Dashboard";
 import NotFound from "./components/NotFound/NotFound";
+import Blog from "./components/blog/Blog";
 
 
 const App = () => {
@@ -28,7 +29,8 @@ const App = () => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/our-services" element={<OurService />} />
         <Route path="/dashboard/*" element={<Dashboard />} />
-
+        <Route path="/our-services" element={<OurService />} />
+        <Route path="/blog" element={<Blog/>} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>
