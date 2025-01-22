@@ -7,7 +7,11 @@ import Signin from "./components/signin/Signin";
 import Signup from "./components/signin/Signup";
 import OurService from "./components/pages/oursService/OurService";
 import Dashboard from "./components/dashboard/Dashboard";
+
 import Blog from "./components/blog/Blog";
+
+import NotFound from "./components/NotFound/NotFound";
+
 
 const App = () => {
   const location = useLocation();
@@ -27,7 +31,13 @@ const App = () => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/our-services" element={<OurService />} />
         <Route path="/dashboard/*" element={<Dashboard />} />
+
         <Route path="/blog" element={<Blog />} />
+
+
+
+        <Route path="*" element={<NotFound />} />
+
       </Routes>
 
       {/* Conditionally render Footer */}

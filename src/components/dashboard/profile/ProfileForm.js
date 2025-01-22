@@ -7,51 +7,48 @@ const ProfileForm = () => {
             <p className="text-sm text-gray-500 mb-6">
                 This information will be displayed publicly, so be careful what you share.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="">
                 <div>
                     <label className="block text-sm font-medium text-gray-700">Username</label>
-                    <div className="mt-1 flex rounded-md shadow-sm">
-                        <span className="inline-flex items-center px-3 rounded-l-md border border-gray-300 bg-gray-50 text-gray-500 sm:text-sm">
-                            workcation.com/
-                        </span>
-                        <input
-                            type="text"
-                            name="username"
-                            className="flex-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300"
-                        />
-                    </div>
+                    <span className="inline-flex items-center px-3 rounded-xl border border-gray-300 bg-gray-50 text-gray-500 sm:text-base">
+                        Jone Doe
+                    </span>
                 </div>
+
+
+                <form class="flex my-8 items-center space-x-6">
+                    <div class="shrink-0">
+                        <img class="h-16 w-16 object-cover rounded-full" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1361&q=80" alt="Current profile photo" />
+                    </div>
+                    <label className="block">
+                        <span className="sr-only">Choose profile photo</span>
+                        <input type="file" className="block w-full text-sm text-slate-500
+                        file:mr-4 file:py-2 file:px-4
+                        file:rounded-full file:border-0
+                        file:text-sm file:font-semibold
+                        file:bg-blue-50
+                        file:text-blue-700
+                        hover:file:bg-blue-100
+                            "/>
+                    </label>
+                </form>
+
                 <div>
                     <label className="block text-sm font-medium text-gray-700">About</label>
-                    <textarea
-                        name="about"
-                        rows="3"
-                        className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md"
-                    ></textarea>
-                    <p className="text-sm text-gray-500 mt-2">
+                    <p className="text-sm mb-1 text-gray-500 mt-2">
                         Write a few sentences about yourself.
                     </p>
+                    <textarea
+                        placeholder="About yourself"
+                        className="textarea mt-2 text-base textarea-bordered w-full rounded-2xl max-w-lg h-40"
+                        rows="8"
+                        cols="50"
+                    />
+
+
                 </div>
-                <div>
-                    <label className="block text-sm font-medium text-gray-700">Photo</label>
-                    <div className="mt-1 flex items-center">
-                        <span className="h-12 w-12 rounded-full bg-gray-100 flex items-center justify-center">
-                            <svg
-                                className="h-full w-full text-gray-300"
-                                fill="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
-                            </svg>
-                        </span>
-                        <button
-                            type="button"
-                            className="ml-4 btn btn-outline btn-primary"
-                        >
-                            Change
-                        </button>
-                    </div>
-                </div>
+
+
             </div>
         </div>
     );
