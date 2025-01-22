@@ -2,7 +2,7 @@ import React from 'react'
 import hedaerPic from '../../../assests/header/header.jpg'
 import { Link } from 'react-router-dom';
 import { FaMagnifyingGlass, FaLocationArrow, FaPenToSquare } from 'react-icons/fa6';
-import { RiListSettingsLine } from "react-icons/ri";
+import AdvanceSrc from './advanceSrch/AdvanceSrc';
 
 export default function Header() {
 
@@ -65,20 +65,11 @@ export default function Header() {
 
 
             <div className='flex justify-center items-center gap-4'>
-              <div className='flex justify-center items-center'>
-
-                <Link
-                  to="/signin"
-                  className="btn btn-primary text-white text-base rounded-3xl"
-                >
-                  <RiListSettingsLine className="text-lg" />
-                  Advanced Search
-                </Link>
-              </div>
+        
+                <AdvanceSrc />         
 
 
-              <div className='flex justify-center items-center'>
-
+              <div>
                 <Link
                   to="/signin"
                   className="btn bg-white text-base border-[#1563DF] rounded-3xl hover:bg-[#1563DF] hover:text-white"
@@ -86,6 +77,7 @@ export default function Header() {
                   <FaMagnifyingGlass className="text-lg" /> Search
                 </Link>
               </div>
+
             </div>
 
 
