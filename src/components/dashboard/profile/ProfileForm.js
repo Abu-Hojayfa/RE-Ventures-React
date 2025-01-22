@@ -16,27 +16,22 @@ const ProfileForm = () => {
                 </div>
 
 
-                <div className="py-10">
-                    <label className="block text-sm font-medium text-gray-700">Photo</label>
-                    <div className="mt-1 md:flex items-center gap-6">
-                        <span className="h-24 w-24 rounded-full bg-gray-100 flex items-center justify-center">
-                            <svg
-                                className="h-full w-full text-gray-300"
-                                fill="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
-                            </svg>
-                        </span>
-
-                        
-                            <input
-                                type="file"
-                                className="file-input file-input-bordered ml-8  rounded-3xl w-3/5  max-w-xs" />
-                        
-
+                <form class="flex my-8 items-center space-x-6">
+                    <div class="shrink-0">
+                        <img class="h-16 w-16 object-cover rounded-full" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1361&q=80" alt="Current profile photo" />
                     </div>
-                </div>
+                    <label className="block">
+                        <span className="sr-only">Choose profile photo</span>
+                        <input type="file" className="block w-full text-sm text-slate-500
+                        file:mr-4 file:py-2 file:px-4
+                        file:rounded-full file:border-0
+                        file:text-sm file:font-semibold
+                        file:bg-blue-50
+                        file:text-blue-700
+                        hover:file:bg-blue-100
+                            "/>
+                    </label>
+                </form>
 
                 <div>
                     <label className="block text-sm font-medium text-gray-700">About</label>

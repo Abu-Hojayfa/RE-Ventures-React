@@ -69,6 +69,14 @@ export default function UpdatePass() {
 
 
             </div>
+
+            <button
+                className="btn mt-5 btn-primary text-white text-base rounded-3xl"
+            >
+                Update Password
+            </button>
+
+
         </div>
     )
 }

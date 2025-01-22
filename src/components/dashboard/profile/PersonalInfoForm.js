@@ -72,6 +72,13 @@ const PersonalInfoForm = () => {
                     />
                 </div>
             </div>
+
+            <button
+                className="btn mt-5 btn-primary text-white text-base rounded-3xl"
+            >
+                Update Information
+            </button>
+
         </div>
     );
 };

@@ -19,20 +19,6 @@ export default function Profile() {
                 <div className="bg-white rounded-lg shadow p-6 mt-8">
                     <UpdatePass />
                 </div>
-
-                <div className="flex gap-4 mt-8">
-                    <button
-                        className="btn bg-white text-base border-[#1563DF] rounded-3xl hover:bg-[#1563DF] hover:text-white"
-                    >
-                        Cancel
-                    </button>
-
-                    <button
-                        className="btn btn-primary text-white text-base rounded-3xl"
-                    >
-                        Save Changes
-                    </button>
-                </div>
             </div>
         </div>
     )

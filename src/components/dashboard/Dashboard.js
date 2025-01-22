@@ -31,6 +31,7 @@ export default function Dashboard() {
                         <Route path="/messages" element={<MessagesMain mainMsg={true} />} />
                         <Route path="/reviews" element={<ReviewsPanel mainReview={true} />} />
                         <Route path="/profile" element={<Profile />} />
+                        <Route path="/add-property" element={<Profile />} />
                     </Routes>
                 </main>
             </div>
