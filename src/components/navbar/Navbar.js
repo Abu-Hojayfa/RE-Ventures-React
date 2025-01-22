@@ -58,7 +58,7 @@ export default function Navbar({ hideHeaderFooter }) {
                                             <span>Contact Us</span>
                                         </li>
                                         <li>
-                                            <span>Blog</span>
+                                        <Link to="/blog">Blog</Link>
                                         </li>
                                         <li>
                                             <Link to="/faqs">Faqs</Link>
@@ -106,7 +106,7 @@ export default function Navbar({ hideHeaderFooter }) {
                                         <span>Contact Us</span>
                                     </li>
                                     <li>
-                                        <span>Blog</span>
+                                    <Link to="/blog">Blog</Link>
                                     </li>
                                     <li>
                                         <Link to="/faqs">Faqs</Link>
