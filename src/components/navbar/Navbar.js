@@ -60,19 +60,22 @@ export default function Navbar({ hideHeaderFooter }) {
                                         className="menu menu-compact dropdown-content bg-base-100 rounded-box z-[1] translate-y-32 w-52 p-2 shadow"
                                     >
                                         <li>
-                                            <span>About Us</span>
+                                            <Link to='/aboutus'>About Us</Link>
                                         </li>
                                         <li>
                                             <Link to="/our-services">Our Services</Link>
                                         </li>
                                         <li>
-                                            <span>Contact Us</span>
+                                            <Link to='/contactus'>Contact Us</Link>
                                         </li>
                                         <li>
                                             <Link to="/blog">Blog</Link>
                                         </li>
                                         <li>
                                             <Link to="/faqs">Faqs</Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/servicepolicy">Service Policy</Link>
                                         </li>
                                     </ul>
                                 </div>
@@ -117,13 +120,13 @@ export default function Navbar({ hideHeaderFooter }) {
                                     className="menu menu-compact dropdown-content bg-base-100 rounded-box z-[1] translate-y-32 w-52 p-2 shadow"
                                 >
                                     <li>
-                                        <span>About Us</span>
+                                    <Link to='/aboutus'>About Us</Link>
                                     </li>
                                     <li>
                                         <Link to="/our-services">Our Services</Link>
                                     </li>
                                     <li>
-                                        <span>Contact Us</span>
+                                        <Link to='/contactus'>Contact Us</Link>
                                     </li>
                                     <li>
                                         <Link to="/blog">Blog</Link>
@@ -131,6 +134,10 @@ export default function Navbar({ hideHeaderFooter }) {
                                     <li>
                                         <Link to="/faqs">Faqs</Link>
                                     </li>
+                                    <li>
+                                            <Link to="/servicepolicy">Service Policy</Link>
+                                    </li>
+                                    
                                 </ul>
                             </div>
                         </li>

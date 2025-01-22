@@ -8,6 +8,10 @@ import Signup from "./components/signin/Signup";
 import OurService from "./components/pages/oursService/OurService";
 import Dashboard from "./components/dashboard/Dashboard";
 import NotFound from "./components/NotFound/NotFound";
+import ContactUs from "./components/contactus/ContactUs";
+import AboutUs from "./components/aboutus/AboutUs";
+import ServicePolicy from "./components/servicepolicy/ServicePolicy";
+
 
 import FAQ from "./components/faqs/Faqs";
 
@@ -35,6 +39,9 @@ const App = () => {
         <Route path="/dashboard/*" element={<Dashboard />} />
         <Route path="/our-services" element={<OurService />} />
         <Route path="/blog" element={<Blog/>} />
+        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/servicepolicy" element={<ServicePolicy />} />
+        <Route path="/contactus" element={<ContactUs />} /> 
 
         <Route path="*" element={<NotFound />} />
       </Routes>
