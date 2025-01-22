@@ -49,19 +49,22 @@ export default function Navbar({ hideHeaderFooter }) {
                                     <summary className="text-lg z-50">Pages</summary>
                                     <ul className="p-2 w-52">
                                         <li>
-                                            <span>About Us</span>
+                                            <Link to='/aboutus'>About Us</Link>
                                         </li>
                                         <li>
                                             <Link to="/our-services">Our Services</Link>
                                         </li>
                                         <li>
-                                            <span>Contact Us</span>
+                                            <Link to='/contactus'>Contact Us</Link>
                                         </li>
                                         <li>
                                         <Link to="/blog">Blog</Link>
                                         </li>
                                         <li>
                                             <Link to="/faqs">Faqs</Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/servicepolicy">Service Policy</Link>
                                         </li>
                                     </ul>
                                 </details>
@@ -97,13 +100,13 @@ export default function Navbar({ hideHeaderFooter }) {
                                 <summary className="text-lg z-50">Pages</summary>
                                 <ul className="p-2 w-52">
                                     <li>
-                                        <span>About Us</span>
+                                    <Link to='/aboutus'>About Us</Link>
                                     </li>
                                     <li>
                                         <Link to="/our-services">Our Services</Link>
                                     </li>
                                     <li>
-                                        <span>Contact Us</span>
+                                        <Link to='/contactus'>Contact Us</Link>
                                     </li>
                                     <li>
                                     <Link to="/blog">Blog</Link>
@@ -111,6 +114,10 @@ export default function Navbar({ hideHeaderFooter }) {
                                     <li>
                                         <Link to="/faqs">Faqs</Link>
                                     </li>
+                                    <li>
+                                            <Link to="/servicepolicy">Service Policy</Link>
+                                    </li>
+                                    
                                 </ul>
                             </details>
                         </li>
