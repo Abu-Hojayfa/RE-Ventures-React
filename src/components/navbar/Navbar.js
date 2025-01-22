@@ -46,7 +46,7 @@ export default function Navbar({ hideHeaderFooter }) {
                             </li>
                             <li>
                                 <details>
-                                    <summary className="text-lg">Pages</summary>
+                                    <summary className="text-lg z-50">Pages</summary>
                                     <ul className="p-2 w-52">
                                         <li>
                                             <span>About Us</span>
@@ -59,6 +59,9 @@ export default function Navbar({ hideHeaderFooter }) {
                                         </li>
                                         <li>
                                             <span>Blog</span>
+                                        </li>
+                                        <li>
+                                            <Link to="/faqs">Faqs</Link>
                                         </li>
                                     </ul>
                                 </details>
@@ -91,7 +94,7 @@ export default function Navbar({ hideHeaderFooter }) {
                         </li>
                         <li>
                             <details>
-                                <summary className="text-lg">Pages</summary>
+                                <summary className="text-lg z-50">Pages</summary>
                                 <ul className="p-2 w-52">
                                     <li>
                                         <span>About Us</span>
@@ -104,6 +107,9 @@ export default function Navbar({ hideHeaderFooter }) {
                                     </li>
                                     <li>
                                         <span>Blog</span>
+                                    </li>
+                                    <li>
+                                        <Link to="/faqs">Faqs</Link>
                                     </li>
                                 </ul>
                             </details>
