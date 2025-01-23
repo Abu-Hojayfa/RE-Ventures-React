@@ -2,14 +2,10 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <div className="bg-gray-50 text-gray-800">
+    <div className="w-5/6 mx-auto my-10">
       {/* Welcome Header */}
-      <header className="bg-blue-600 text-white py-10">
-        <div className="container mx-auto text-center">
-          <h1 className="text-4xl font-bold">Welcome to Homelengo</h1>
-          <p className="mt-2 text-lg">Your trusted partner in finding your dream home.</p>
-        </div>
-      </header>
+      <HeaderSection />
+      
 
       {/* Agents Section */}
       <AgentsSection />
@@ -24,30 +20,54 @@ const AboutUs = () => {
   );
 };
 
+const HeaderSection = () => {
+  
+  return(
+  <section>
+    <div className="hero rounded-3xl"
+                style={{
+                    backgroundImage: "url(https://www.blogtyrant.com/wp-content/uploads/2011/02/best-about-us-pages.png)",
+                }}>
+                <div className="hero-overlay bg-opacity-60 rounded-3xl"></div>
+                <div className="hero-content text-neutral-content text-center">
+                    <div className="max-w-md  py-2 pt-5">
+                        <p>Home / AboutUs</p>
+                        <h1 className="mb-5 text-5xl font-bold">About Us</h1>
+                        <p className="mb-5">
+                            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+                            quasi. In deleniti eaque aut repudiandae et a id nisi.
+                        </p>
+                    </div>
+                </div>
+           </div>
+     </section>
+  );
+
+};
+
 const AgentsSection = () => {
   const agents = [
-    { name: "John Doe", designation: "Real Estate Agent", image: "https://via.placeholder.com/150" },
-    { name: "Jane Smith", designation: "Senior Realtor", image: "https://via.placeholder.com/150" },
+    { name: "John Doe", designation: "Real Estate Agent", image: "https://img.freepik.com/premium-vector/agent-logo-vector-detective-logo_776251-7.jpg" },
+    { name: "Jane Smith", designation: "Senior Realtor", image: "https://i.pinimg.com/originals/c4/7d/06/c47d067db22cee56659f69afb1fcbad9.png" },
+    { name: "Alice Johnson", designation: "Property Consultant", image: "https://ih1.redbubble.net/image.1386979282.5532/ur,pin_large_front,square,600x600.u1.jpg" },
   ];
 
   return (
     <section className="py-12 bg-white">
-      <div className="container mx-auto px-6">
-        <h2 className="text-2xl font-bold text-center mb-8">Meet Our Team</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {agents.map((agent, index) => (
-            <div key={index} className="card bg-base-100 shadow-xl">
-              <figure className="p-6">
-                <img src={agent.image} alt={agent.name} className="rounded-full w-24 h-24 mx-auto" />
-              </figure>
-              <div className="card-body text-center">
-                <h3 className="text-xl font-semibold">{agent.name}</h3>
-                <p className="text-gray-600">{agent.designation}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      <div className="card bg-base-100 w-96 shadow-xl">
+  <figure>
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+      alt="Shoes" />
+  </figure>
+  <div className="card-body">
+    <h2 className="card-title t-justify">
+      Shoes!
+    </h2>
+    <p>If a dog chews shoes whose shoes does he choose?</p>
+    
+  </div>
+</div>
     </section>
   );
 };

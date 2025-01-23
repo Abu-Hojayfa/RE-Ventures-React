@@ -92,17 +92,17 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="w-5/6 mx-auto my-10">
+    <div className="w-5/6 mx-auto  ">
       <div
-        className="hero rounded-3xl z-30"
+        className="hero rounded-3xl z-30 bg-cover bg-center"
         style={{
           backgroundImage:
-            "url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp)",
+            "url(https://neilpatel.com/wp-content/uploads/fly-images/144256/Get-Your-FAQs-Straight-Convert-Your-Curious-Customers-1200x675-c.jpg)",
         }}
       >
         <div className="hero-overlay bg-opacity-60 rounded-3xl"></div>
         <div className="hero-content text-neutral-content text-center">
-          <div className="max-w-md  py-10 ">
+          <div className="max-w-md py-2 pt-5 ">
             <p>Home / Faqs</p>
             <h1 className="mb-5 text-5xl font-bold">
               Frequently Asked Questions
