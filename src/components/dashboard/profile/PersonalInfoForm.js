@@ -33,7 +33,8 @@ const PersonalInfoForm = () => {
                 <div>
                     < label className="block text-sm font-medium  mb-1 text-gray-700">Country</label>
                     <select className="select select-bordered rounded-3xl w-full">
-                        <option className="">United States</option>
+                        <option className="">Bangladesh</option>
+                        <option>United States</option>
                         <option>Canada</option>
                         <option>Mexico</option>
                     </select>
@@ -62,6 +63,7 @@ const PersonalInfoForm = () => {
                 <div>
                     < label className="block text-sm font-medium  mb-1 text-gray-700">ZIP Code</label>
                     <input
+                        placeholder="Zip Code"
                         type="text"
                         className="input rounded-3xl input-bordered w-full"
                         onKeyDown={(e) => {
