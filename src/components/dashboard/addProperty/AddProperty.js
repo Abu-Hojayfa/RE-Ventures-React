@@ -3,6 +3,7 @@ import FileUpload from './fileUpload/FileUpload'
 import Information from './Information'
 import AmenitiesCheckboxes from '../../home/header/advanceSrch/AmenitiesCheckboxes'
 import AdditionalInfo from './AdditionalInfo'
+import Price from './Price'
 
 export default function AddProperty() {
 
@@ -25,6 +26,14 @@ export default function AddProperty() {
                 <p className='text-3xl font-semibold mb-3'>Information</p>
 
                 <Information />
+
+            </div>
+
+            <div className='p-6 bg-white rounded-md shadow-md '>
+
+                <p className='text-3xl font-semibold mb-3'>Price</p>
+
+                <Price />
 
             </div>
 

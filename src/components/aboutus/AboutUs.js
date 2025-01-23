@@ -1,4 +1,5 @@
 import React from "react";
+import OurAgents from "./OurAgents";
 
 const AboutUs = () => {
   return (
@@ -8,7 +9,7 @@ const AboutUs = () => {
       
 
       {/* Agents Section */}
-      <AgentsSection />
+      <OurAgents />
 
       {/* Hero Section */}
       <HeroSection />
@@ -45,32 +46,7 @@ const HeaderSection = () => {
 
 };
 
-const AgentsSection = () => {
-  const agents = [
-    { name: "John Doe", designation: "Real Estate Agent", image: "https://img.freepik.com/premium-vector/agent-logo-vector-detective-logo_776251-7.jpg" },
-    { name: "Jane Smith", designation: "Senior Realtor", image: "https://i.pinimg.com/originals/c4/7d/06/c47d067db22cee56659f69afb1fcbad9.png" },
-    { name: "Alice Johnson", designation: "Property Consultant", image: "https://ih1.redbubble.net/image.1386979282.5532/ur,pin_large_front,square,600x600.u1.jpg" },
-  ];
 
-  return (
-    <section className="py-12 bg-white">
-      <div className="card bg-base-100 w-96 shadow-xl">
-  <figure>
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-      alt="Shoes" />
-  </figure>
-  <div className="card-body">
-    <h2 className="card-title t-justify">
-      Shoes!
-    </h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    
-  </div>
-</div>
-    </section>
-  );
-};
 
 const HeroSection = () => {
   const specialties = [

@@ -67,21 +67,6 @@ export default function AdditionalInfo() {
 
 
 
-
-const OnlyText = ({ label, placeholder }) => {
-    return (
-        <div className="w-full">
-            <label className="block text-sm font-medium mb-1 text-gray-700">{label}</label>
-            <input
-                required
-                placeholder={placeholder}
-                type="text"
-                className="input rounded-3xl input-bordered w-full"
-            />
-        </div>
-    );
-};
-
 const OnlyNumb = ({ label, placeholder }) => {
     return (
         <div className=' w-full '>
@@ -106,8 +91,8 @@ const SelectRadio = ({ label, placeholder, options = [] }) => {
         <div className="w-full">
             <label className="block text-sm font-medium mb-1 text-gray-700">{label}</label>
             <select className="select select-bordered rounded-3xl w-full">
-                <option disabled value="" selected>
-                    {placeholder}
+                <option disabled value={placeholder}>
+
                 </option>
                 {options.map((option, index) => (
                     <option key={index} value={option.value || option}>

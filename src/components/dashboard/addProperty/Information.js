@@ -11,7 +11,7 @@ export default function Information() {
     return (
         <div className='px-4'>
 
-            <from>
+            <form>
 
                 <div className="mt-6">
                     <label className="block text-sm font-medium mb-1 text-gray-700">Title*</label>
@@ -108,7 +108,7 @@ export default function Information() {
                 <Map latitude={latitude} longitude={longitude} />
 
 
-            </from>
+            </form>
 
         </div>
     )
