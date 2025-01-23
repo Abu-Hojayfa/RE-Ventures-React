@@ -2,6 +2,7 @@ import React from 'react'
 import FileUpload from './fileUpload/FileUpload'
 import Information from './Information'
 import AmenitiesCheckboxes from '../../home/header/advanceSrch/AmenitiesCheckboxes'
+import AdditionalInfo from './AdditionalInfo'
 
 export default function AddProperty() {
 
@@ -19,7 +20,7 @@ export default function AddProperty() {
 
             </div>
 
-            <div className='p-6 bg-white rounded-md shadow-md mb-5'>
+            <div className='p-6 bg-white rounded-md shadow-md '>
 
                 <p className='text-3xl font-semibold mb-3'>Information</p>
 
@@ -27,7 +28,15 @@ export default function AddProperty() {
 
             </div>
 
-            <div className='p-6 bg-white rounded-md shadow-xl mb-5'>
+            <div className='p-6 bg-white rounded-md shadow-md '>
+
+                <p className='text-3xl font-semibold mb-3'>Additional Information</p>
+
+                <AdditionalInfo />
+
+            </div>
+
+            <div className='p-6 bg-white rounded-md shadow-xl '>
 
                 <p className='text-3xl font-semibold mb-4'>Amenities*</p>
 

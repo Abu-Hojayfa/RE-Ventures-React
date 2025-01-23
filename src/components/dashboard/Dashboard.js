@@ -23,7 +23,7 @@ export default function Dashboard() {
             {/* Main content */}
             <div className="flex-1 flex flex-col">
                 <Header sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
-                <main className="min-h-screen pl-[17rem] bg-[#E5E7EB] p-6">
+                <main className="pl-[17rem] bg-[#E5E7EB] p-6">
                     {/* Nested Routes for Dashboard */}
                     <Routes>
                         <Route path="/" element={<MainDash />} />

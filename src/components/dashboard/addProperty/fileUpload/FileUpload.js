@@ -51,7 +51,7 @@ export default function FileUpload() {
         <div>
             {/* Upload Zone */}
             <div
-                className={`w-full flex justify-center items-center h-[40vh] relative border-2 ${isDragOver ? "border-indigo-600" : "border-gray-300"
+                className={`w-full flex justify-center items-center h-[30vh] relative border-2 ${isDragOver ? "border-indigo-600" : "border-gray-300"
                     } border-dashed rounded-lg p-6`}
                 onDragOver={handleDragOver}
                 onDragLeave={handleDragLeave}
