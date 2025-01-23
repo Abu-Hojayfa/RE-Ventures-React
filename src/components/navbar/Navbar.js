@@ -111,13 +111,13 @@ export default function Navbar({ hideHeaderFooter }) {
                                 <div
                                     tabIndex={0}
                                     role="button"
-                                    className="btn flex items-center btn-ghost text-lg"
+                                    className="btn flex items-center btn-ghost text-lg relative "
                                 >
                                     Pages <RiArrowDropDownLine className="text-3xl" />
                                 </div>
                                 <ul
                                     tabIndex={0}
-                                    className="menu menu-compact dropdown-content bg-base-100 rounded-box z-[1] translate-y-32 w-52 p-2 shadow"
+                                    className="absolute top-12 menu menu-compact dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
                                 >
                                     <li>
                                     <Link to='/aboutus'>About Us</Link>

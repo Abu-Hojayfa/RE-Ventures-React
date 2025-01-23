@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import hedaerPic from '../../../assests/header/header.jpg'
 import { Link } from 'react-router-dom';
 import { FaMagnifyingGlass, FaLocationArrow, FaPenToSquare } from 'react-icons/fa6';
 import AdvanceSrc from './advanceSrch/AdvanceSrc';
 
 export default function Header() {
+
+  const [houseState, setHouseState] = useState("rent");
+
+  const inActiveStateStyle = "bg-white text-base border-[#1563DF] rounded-3xl hover:bg-[#1563DF] hover:text-white";
+  const activeStateStyle = "text-base border-[#1563DF] rounded-3xl bg-[#1563DF] hover:bg-[#1536DF] text-white";
+
+
+  const conditionalRent = (houseState === "rent") ? activeStateStyle : inActiveStateStyle;
+  const conditionalSell = (houseState === "sell") ? activeStateStyle : inActiveStateStyle;
 
   const commonStyle = "w-52 p-2 outline-none focus:outline-none border-none focus:border-none hover:border-none active:border-none";
 
@@ -26,21 +35,35 @@ export default function Header() {
           </div>
 
 
-          <div className='mx-auto'>
-            <div className='btn bg-white text-base border-[#1563DF] rounded-3xl hover:bg-[#1563DF] hover:text-white'>
-              Rent
+
+
+
+
+          <div className="flex w-4/6  mx-auto justify-evenly items-center bg-white text-black rounded-full p-3 py-4 gap-5 relative">
+
+            <div className="absolute -top-16 flex gap-4">
+              {/* Rent Button */}
+              <div onClick={() => setHouseState("rent")} className="relative cursor-pointer">
+                <div className={`btn ${conditionalRent}`}>For Rent</div>
+                <div
+                  style={{
+                    clipPath: "polygon(0% 0%, 100% 0%, 50% 100%)",
+                  }}
+                  className={`absolute top-full left-1/2 transform -translate-x-1/2 w-6 h-4 bg-[#1563DF] transition-all duration-300 ${houseState === "rent" ? "opacity-100 scale-100" : "opacity-0 scale-50"}`}
+                ></div>
+              </div>
+
+              {/* Sell Button */}
+              <div onClick={() => setHouseState("sell")} className="relative cursor-pointer">
+                <div className={`btn ${conditionalSell}`}>For Sell</div>
+                <div
+                  style={{
+                    clipPath: "polygon(0% 0%, 100% 0%, 50% 100%)",
+                  }}
+                  className={`absolute top-full left-1/2 transform -translate-x-1/2 w-6 h-4 bg-[#1563DF] transition-all duration-300 ${houseState === "sell" ? "opacity-100 scale-100" : "opacity-0 scale-50"}`}
+                ></div>
+              </div>
             </div>
-
-            <div className='btn bg-white text-base border-[#1563DF] rounded-3xl hover:bg-[#1563DF] hover:text-white'>
-              Sell
-            </div>
-          </div>
-
-
-
-          <div className="flex w-4/6  mx-auto justify-evenly items-center bg-white text-black rounded-full p-3 py-4 gap-5">
-
-
 
             <div className='pr-2 border-r-2 border-gray-300'>
 
