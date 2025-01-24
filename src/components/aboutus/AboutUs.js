@@ -1,47 +1,60 @@
 import React from "react";
 import OurAgents from "./OurAgents";
+import WhatweDo from "../home/WhatweDo";
 
 const AboutUs = () => {
   return (
-    <div className="w-5/6 mx-auto my-10">
+    <div >
       {/* Welcome Header */}
-      <HeaderSection />
-      
+      <div className="w-5/6 mx-auto my-10">
+        <HeaderSection />
+      </div>
+
+      <div className="w-5/6 mx-auto my-10">
+        <OurAgents />
+      </div>
+
 
       {/* Agents Section */}
-      <OurAgents />
+      <WhatweDo />
+
 
       {/* Hero Section */}
-      <HeroSection />
-
-      {/* Reviews Section */}
-      <ReviewsSection />
+      <div className="w-5/6 mx-auto my-10">
+        <HeroSection />
+      </div>
       
+
+      {/* Reviews Section */}   
+      <div className="w-5/6 mx-auto my-10">
+        <ReviewsSection />
+      </div>
+
     </div>
   );
 };
 
 const HeaderSection = () => {
-  
-  return(
-  <section>
-    <div className="hero rounded-3xl"
-                style={{
-                    backgroundImage: "url(https://www.blogtyrant.com/wp-content/uploads/2011/02/best-about-us-pages.png)",
-                }}>
-                <div className="hero-overlay bg-opacity-60 rounded-3xl"></div>
-                <div className="hero-content text-neutral-content text-center">
-                    <div className="max-w-md  py-2 pt-5">
-                        <p>Home / AboutUs</p>
-                        <h1 className="mb-5 text-5xl font-bold">About Us</h1>
-                        <p className="mb-5">
-                            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                            quasi. In deleniti eaque aut repudiandae et a id nisi.
-                        </p>
-                    </div>
-                </div>
-           </div>
-     </section>
+
+  return (
+    <section>
+      <div className="hero rounded-3xl"
+        style={{
+          backgroundImage: "url(https://www.blogtyrant.com/wp-content/uploads/2011/02/best-about-us-pages.png)",
+        }}>
+        <div className="hero-overlay bg-opacity-60 rounded-3xl"></div>
+        <div className="hero-content text-neutral-content text-center">
+          <div className="max-w-md  py-2 pt-5">
+            <p>Home / AboutUs</p>
+            <h1 className="mb-5 text-5xl font-bold">About Us</h1>
+            <p className="mb-5">
+              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+              quasi. In deleniti eaque aut repudiandae et a id nisi.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 
 };

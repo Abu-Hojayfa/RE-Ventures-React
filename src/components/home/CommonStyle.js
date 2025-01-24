@@ -3,7 +3,7 @@ import { FaArrowRight } from 'react-icons/fa';
 
 export default function CommonStyle({ title, des, cardData, type }) {
     return (
-        <div className="bg-[#F3F7FD] pb-36 pt-10">
+        <div className={`${type === 'blog'? 'bg-[#F3F7FD]':'bg-none'} pb-36 pt-10`}>
             <div className="text-center my-12">
                 <p className="text-[#1563DF] text-lg font-semibold mb-2">{title}</p>
                 <p className="text-4xl font-bold text-black">
