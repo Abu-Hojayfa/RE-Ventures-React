@@ -12,7 +12,9 @@ export default function Home() {
       <Header />
       <FrdProperties />
       <WhatweDo />
-      <CommentCarousel />
+      <div className='py-16 bg-[#F3F7FD]'>
+        <CommentCarousel />
+      </div>
       <OurAgents />
       <BlogCard />
     </div>
