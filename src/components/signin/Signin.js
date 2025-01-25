@@ -7,7 +7,7 @@ export default function Signin() {
         <div>
             <div className="flex flex-col justify-center items-center px-6 mx-auto mb-10">
                 <a href="/" className="justify-center items-center mb-8 text-2xl font-semibold lg:mb-10">
-                    <img src={logo} className="mr-4 h-52" alt=" Logo" />
+                    <img src={logo} className="mr-4 h-36" alt=" Logo" />
                 </a>
                 {/* Card */}
                 <div className="p-10 pt-0 w-full max-w-lg bg-base-100 rounded-2xl shadow-xl shadow-gray-300">

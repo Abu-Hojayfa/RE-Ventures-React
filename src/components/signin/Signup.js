@@ -8,13 +8,13 @@ export default function Signup() {
         <div>
 
             <div className="flex flex-col justify-center items-center px-6 mx-auto mb-10">
-                <a href="/" className="justify-center items-center mb-8 text-2xl font-semibold lg:mb-10">
-                    <img src={logo} className="mr-4 h-52" alt=" Logo" />
+                <a href="/" className="justify-center pb-2 items-center mb-8 text-2xl font-semibold lg:mb-10">
+                    <img src={logo} className="mr-4 h-36" alt=" Logo" />
                 </a>
                 {/* Card */}
                 <div className="p-10 pt-0 w-full max-w-lg bg-base-100 rounded-2xl shadow-xl shadow-gray-300">
                     <div className="space-y-8">
-                        <h2 className="text-2xl font-bold text-base-content">Sign in to platform</h2>
+                        <h2 className="text-2xl font-bold text-base-content">Create Account</h2>
                         <div className="grid grid-cols-3 gap-3 mt-6">
                             <a
                                 href="#!"
