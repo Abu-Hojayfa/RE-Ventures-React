@@ -44,7 +44,7 @@ export default function Navbar({ hideHeaderFooter }) {
                                 <span className="text-lg">Properties</span>
                             </li>
                             <li>
-                                <span className="text-lg">Listings</span>
+                                <Link to="/listing" className="text-lg">Listings</Link>
                             </li>
                             <li>
                                 <div className="dropdown  p-0">
@@ -101,10 +101,10 @@ export default function Navbar({ hideHeaderFooter }) {
                             </Link>
                         </li>
                         <li>
-                            <span className="text-lg">Properties</span>
+                            <Link to="/listing" className="text-lg">Properties</Link>
                         </li>
                         <li>
-                            <span className="text-lg">Listings</span>
+                        <Link to="/listing" className="text-lg">Listings</Link>
                         </li>
                         <li>
                             <div className="dropdown p-0">
@@ -120,7 +120,7 @@ export default function Navbar({ hideHeaderFooter }) {
                                     className="absolute top-12 menu menu-compact dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
                                 >
                                     <li>
-                                    <Link to='/aboutus'>About Us</Link>
+                                        <Link to='/aboutus'>About Us</Link>
                                     </li>
                                     <li>
                                         <Link to="/our-services">Our Services</Link>
@@ -135,9 +135,9 @@ export default function Navbar({ hideHeaderFooter }) {
                                         <Link to="/faqs">Faqs</Link>
                                     </li>
                                     <li>
-                                            <Link to="/servicepolicy">Service Policy</Link>
+                                        <Link to="/servicepolicy">Service Policy</Link>
                                     </li>
-                                    
+
                                 </ul>
                             </div>
                         </li>

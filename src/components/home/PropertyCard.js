@@ -2,9 +2,10 @@ import React from "react";
 import { MdBathtub, MdBed } from "react-icons/md";
 import { TbRulerMeasure } from "react-icons/tb";
 
-export default function PropertyCard({ data }) {
+export default function PropertyCard({ data, isGrid }) {
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+        <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-${isGrid} ${isGrid = 2 ? 'mt-0 gap-8' : 'mt-16 gap-16'}`}>
+
             {data.map((property, index) => (
                 <div
                     key={index}
@@ -55,7 +56,7 @@ export default function PropertyCard({ data }) {
                                     {property.ownerName}
                                 </p>
                             </div>
-                            <div className="text-2xl font-semibold text-gray-500">
+                            <div className="text-xl font-semibold text-gray-500">
                                 ${property.price}
                             </div>
                         </div>

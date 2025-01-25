@@ -121,7 +121,7 @@ export default function CommentCarousel() {
                     disableOnInteraction: false,
                     reverseDirection: true,
                 }}
-                speed={3000} // Adjust the speed for smooth sliding
+                speed={4000} // Adjust the speed for smooth sliding
                 loop={true}
                 pagination={{
                     clickable: true,

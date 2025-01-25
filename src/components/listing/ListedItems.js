@@ -1,12 +1,6 @@
-import React, { useState } from "react";
-import PropertyCard from "./PropertyCard";
-import img from "../../assests/service/buy.jpg"
-
-const selectbtnstyle =
-    "btn font-semibold text-sm my-1 py-1 h-auto min-h-2 border-[#1563DF] rounded-3xl hover:bg-[#1563DF] hover:text-white";
-
-const propertyTypes = ["viewAll", "apartment", "villa", "house", "office"]; // Dynamic list of property types
-
+import React from 'react'
+import img from '../../assests/service/buy.jpg'
+import PropertyCard from '../home/PropertyCard';
 
 
 const propertyData = [
@@ -84,48 +78,10 @@ const propertyData = [
     },
 ];
 
-
-
-
-export default function FrdProperties() {
-    const [isActive, setIsActive] = useState("viewAll");
-
+export default function ListedItems() {
     return (
-        <div className="w-5/6 m-auto my-16 mt-24">
-            {/* Header Section */}
-            <div className="text-center">
-                <p className="text-[#1563DF] text-xl font-semibold">Featured Properties</p>
-                <p className="text-4xl font-bold text-black">
-                    Discover RE Venture’s Finest <br />
-                    Properties for Your Dream Home
-                </p>
-            </div>
-
-            {/* Buttons Section */}
-            <div className="flex justify-center items-center mt-5">
-                {propertyTypes.map((type) => (
-                    <div key={type} className="mr-4">
-                        <button
-                            className={`${selectbtnstyle} ${isActive === type ? "bg-[#1563DF] text-white" : "bg-white"
-                                }`}
-                            onClick={() => {
-                                setIsActive(type);
-                                console.log(type); // Logging the active type
-                            }}
-                        >
-                            {type.charAt(0).toUpperCase() + type.slice(1)} {/* Capitalize first letter */}
-                        </button>
-                    </div>
-                ))}
-            </div>
-
-
-
-            {/* Cards */}
-            <div className="w-4/5 mx-auto">
-                <PropertyCard data={propertyData} isGrid={3}/>
-            </div>
-
+        <div>
+            <PropertyCard data={propertyData} isGrid={2} />
         </div>
-    );
+    )
 }

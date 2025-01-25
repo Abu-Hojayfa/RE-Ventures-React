@@ -16,6 +16,7 @@ import ServicePolicy from "./components/servicepolicy/ServicePolicy";
 import FAQ from "./components/faqs/Faqs";
 
 import Blog from "./components/blog/Blog";
+import Listing from "./components/listing/Listing";
 
 
 const App = () => {
@@ -38,10 +39,11 @@ const App = () => {
         <Route path="/faqs" element={<FAQ />} />
         <Route path="/dashboard/*" element={<Dashboard />} />
         <Route path="/our-services" element={<OurService />} />
-        <Route path="/blog" element={<Blog/>} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/servicepolicy" element={<ServicePolicy />} />
-        <Route path="/contactus" element={<ContactUs />} /> 
+        <Route path="/contactus" element={<ContactUs />} />
+        <Route path="/listing" element={<Listing />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>
