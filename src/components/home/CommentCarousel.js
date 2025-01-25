@@ -7,7 +7,7 @@ import { RiDoubleQuotesL } from "react-icons/ri";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import { Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 
 import img1 from "../../assests/agents/agent-1.jpg";
 import img2 from "../../assests/agents/agent-2.jpg";
@@ -116,6 +116,13 @@ export default function CommentCarousel() {
             <Swiper
                 slidesPerView={1}
                 spaceBetween={20}
+                autoplay={{
+                    delay: 0, // Continuous sliding with no pauses
+                    disableOnInteraction: false,
+                    reverseDirection: true,
+                }}
+                speed={3000} // Adjust the speed for smooth sliding
+                loop={true}
                 pagination={{
                     clickable: true,
                     dynamicBullets: true,
@@ -134,7 +141,7 @@ export default function CommentCarousel() {
                         spaceBetween: 50,
                     },
                 }}
-                modules={[Pagination]}
+                modules={[Pagination, Autoplay]}
                 className="mySwiper"
             >
                 {comments.map((item, index) => {

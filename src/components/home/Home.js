@@ -5,6 +5,7 @@ import WhatweDo from './WhatweDo'
 import OurAgents from '../aboutus/OurAgents'
 import BlogCard from './BlogCard'
 import CommentCarousel from './CommentCarousel'
+import TrustedByCompanies from './TrustedByCompanies'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <CommentCarousel />
       </div>
       <OurAgents />
+      <TrustedByCompanies />
       <BlogCard />
     </div>
   )

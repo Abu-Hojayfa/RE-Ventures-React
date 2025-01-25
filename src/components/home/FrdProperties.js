@@ -91,7 +91,7 @@ export default function FrdProperties() {
     const [isActive, setIsActive] = useState("viewAll");
 
     return (
-        <div className="w-5/6 m-auto my-16">
+        <div className="w-5/6 m-auto my-16 mt-24">
             {/* Header Section */}
             <div className="text-center">
                 <p className="text-[#1563DF] text-xl font-semibold">Featured Properties</p>
