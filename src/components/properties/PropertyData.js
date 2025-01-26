@@ -16,7 +16,8 @@ const propertyData = {
         country: "USA",
         state: "Illinois",
         zip: "62704",
-        location: "39.7817,-89.6501",
+        longitude: -89.6501,
+        latitude: 39.7817,
         user_id: 1,
     },
     house_details: {
@@ -27,6 +28,7 @@ const propertyData = {
         bedrooms: 3,
         bathrooms: 2,
         rooms: 6,
+        year_built: 2016,
         house_id: 1,
     },
     amenities: {

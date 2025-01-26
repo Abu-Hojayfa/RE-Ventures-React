@@ -1,23 +1,21 @@
 import React from "react";
-import { MdBathtub, MdBed, MdPinDrop } from "react-icons/md";
+import { MdBed, MdBathtub, MdPinDrop } from "react-icons/md";
 import { TbRulerMeasure } from "react-icons/tb";
 
-export default function PropertyFeatures({ details }) {
-    const { bedrooms, bathrooms, size, address } = details;
-
+export default function PropertyFeatures({ houseDetails, address }) {
     return (
         <div className="flex gap-20">
             <div>
                 <p className="text-lg font-semibold">Features</p>
                 <div className="flex items-center mb-3 mt-1 gap-8">
                     <p className="flex items-center gap-2">
-                        <MdBed className="text-xl text-gray-500" /> Beds: {bedrooms}
+                        <MdBed className="text-xl text-gray-500" /> Beds: {houseDetails.bedrooms}
                     </p>
                     <p className="flex items-center gap-2">
-                        <MdBathtub className="text-xl text-gray-500" /> Baths: {bathrooms}
+                        <MdBathtub className="text-xl text-gray-500" /> Baths: {houseDetails.bathrooms}
                     </p>
                     <p className="flex items-center gap-2">
-                        <TbRulerMeasure className="text-xl text-gray-500" /> Sqft: {size}
+                        <TbRulerMeasure className="text-xl text-gray-500" /> Sqft: {houseDetails.size}
                     </p>
                 </div>
             </div>
