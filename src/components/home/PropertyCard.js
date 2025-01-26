@@ -8,7 +8,7 @@ export default function PropertyCard({ data, isGrid }) {
         <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-${isGrid} ${isGrid = 2 ? 'mt-0 gap-8' : 'mt-16 gap-16'}`}>
 
             {data.map((property, index) => (
-                <Link to={`/property/${index}`} >
+                <Link to={`/property/527`} >
 
 
                     <div
