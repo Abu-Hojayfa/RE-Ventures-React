@@ -4,16 +4,16 @@ import { GiSettingsKnobs, GiHomeGarage } from "react-icons/gi";
 import { MdBed, MdBathtub } from "react-icons/md";
 import { PiHammer } from "react-icons/pi";
 
-export default function PropertyOverview({ house, houseDetails }) {
+export default function PropertyOverview({ house, houseDetails, size }) {
     const overviewData = [
         { icon: BsHouse, label: "Property ID", value: house.house_id },
         { icon: GiHomeGarage, label: "Garage", value: house.house_id },
         { icon: GiSettingsKnobs, label: "Type", value: houseDetails.type },
-        { icon: BsRulers, label: "Size", value: `${houseDetails.size} Sqft` },
+        { icon: BsRulers, label: "Size", value: `${size} Sqft` },
 
         { icon: MdBed, label: "Bedrooms", value: houseDetails.bedrooms },
         { icon: MdBathtub, label: "Bathrooms", value: houseDetails.bathrooms },
-        { icon: PiHammer, label: "Year Built", value: houseDetails.year_built },
+        { icon: PiHammer, label: "Year Built", value: houseDetails.year_build },
     ];
 
     return (

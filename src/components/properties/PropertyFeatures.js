@@ -15,7 +15,7 @@ export default function PropertyFeatures({ houseDetails, address }) {
                         <MdBathtub className="text-xl text-gray-500" /> Baths: {houseDetails.bathrooms}
                     </p>
                     <p className="flex items-center gap-2">
-                        <TbRulerMeasure className="text-xl text-gray-500" /> Sqft: {houseDetails.size}
+                        <TbRulerMeasure className="text-xl text-gray-500" /> Sqft: {houseDetails.property_area}
                     </p>
                 </div>
             </div>

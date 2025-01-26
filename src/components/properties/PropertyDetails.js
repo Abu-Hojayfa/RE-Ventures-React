@@ -11,7 +11,7 @@ export default function PropertyDetails({ houseDetails = {}, amenities = {} }) {
 
     // Filter `amenities` to include only those that are `true`, excluding unwanted keys
     const amenitiesArray = Object.entries(amenities)
-        .filter(([key, value]) => value === true && !["amenities_id", "house_id"].includes(key)) // Exclude specific keys
+        .filter(([key, value]) => value === 1 && !["amenities_id", "house_id"].includes(key)) // Exclude specific keys
         .map(([key]) => key.replace(/_/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())); // Format labels
 
     return (
@@ -26,7 +26,8 @@ export default function PropertyDetails({ houseDetails = {}, amenities = {} }) {
                     >
                         <p className="text-gray-500">{label}:</p>
                         <p className="font-semibold">
-                            {typeof value === "number" ? value.toLocaleString() : value}
+                            {/* Check if the value is an object or array */}
+                            {typeof value === "object" ? JSON.stringify(value) : value}
                         </p>
                     </div>
                 ))}
@@ -40,9 +41,8 @@ export default function PropertyDetails({ houseDetails = {}, amenities = {} }) {
                         key={index}
                         className="flex items-center gap-2 p-3 rounded-lg hover:shadow-md transition"
                     >
-                    
                         <span className="text-gray-500 text-xl leading-none">•</span>
-                        <p className=" text-gray-500 font-semibold">{amenity}</p>
+                        <p className="text-gray-500 font-semibold">{amenity}</p>
                     </div>
                 ))}
             </div>
