@@ -13,6 +13,7 @@ const propertyData = {
         title: "Modern Family Home",
         description: "A beautiful, fully-furnished modern home located in the heart of the city.",
         full_address: "456 Oak Avenue, Springfield, USA",
+        city : "Springfield",
         country: "USA",
         state: "Illinois",
         zip: "62704",

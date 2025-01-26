@@ -10,13 +10,23 @@ import SideListing from "../listing/SideListing";
 import Search from "../listing/Search";
 import PropertyDetails from "./PropertyDetails";
 import Map from "../dashboard/addProperty/mapAndComponents/Map";
+import Calculator from "./Calculator";
 
 export default function Properties() {
     const { id } = useParams();
     const [isFav, setIsFav] = useState(false);
     const [showToast, setShowToast] = useState("");
 
+
     const { house, house_details, images, prices, amenities } = propertyData;
+
+    const mapInfoArray = Object.entries(house)
+        .filter(([key]) => !["description", "house_id", "title", "full_address", "user_id"].includes(key)) // Exclude specific keys
+        .map(([key, value]) => ({
+            label: key.replace(/_/g, " ").replace(/\b\w/g, (l) => l.toUpperCase()), // Format label
+            value,
+        }));
+
 
     const handleFavoriteToggle = () => {
         setIsFav(!isFav);
@@ -77,9 +87,27 @@ export default function Properties() {
                     <PropertyOverview house={house} houseDetails={house_details} />
                     <PropertyDetails houseDetails={house_details} amenities={amenities} />
 
+                    {/* Map and Things */}
                     <div>
                         <p className="text-2xl pt-6 border-t mt-3">Maps and Location</p>
-                        <Map longitude={house.longitude} latitude={house.latitude}/>
+                        <Map longitude={house.longitude} latitude={house.latitude} />
+                        <div className="grid grid-cols-2 mt-5 mb-5">
+                            {mapInfoArray.map(({ label, value }, index) => (
+                                <div
+                                    key={index}
+                                    className="flex items-center   gap-2 space-x-10 p-2"
+                                >
+                                    <p className="text-gray-500 w-16">{label}:</p>
+                                    <p className="font-semibold">
+                                        {typeof value === "number" ? value.toLocaleString() : value}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                        {/* Map End Here */}
+
+                        <Calculator />
+
                     </div>
 
                 </div>
