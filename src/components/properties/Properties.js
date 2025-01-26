@@ -6,6 +6,7 @@ import propertyData from "./PropertyData"; // Import the data
 import { IoIosHeartEmpty, IoIosHeart } from "react-icons/io";
 import { GoShareAndroid } from "react-icons/go";
 import { BsHouse, BsRulers } from "react-icons/bs";
+import { GiSettingsKnobs } from "react-icons/gi";
 
 export default function Properties() {
     const { id } = useParams();
@@ -124,34 +125,76 @@ export default function Properties() {
             </div>
 
             {/* Property Overview */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-                <div className="flex items-center gap-4 p-4 border rounded-lg hover:shadow-md transition">
-                    <BsHouse className="text-3xl text-blue-500" />
-                    <div>
-                        <p className="text-gray-500">Property ID:</p>
-                        <p className="font-semibold">{house.house_id}</p>
+
+            <div className="grid grid-cols-12">
+                <div className="col-span-7">
+
+                    <p className="text-3xl mt-8">
+                        Overview
+                    </p>
+                    
+                    <div className="grid grid-cols-4 gap-4 mt-8">
+
+                        <div className="flex items-center gap-4 p-4 border rounded-lg hover:shadow-md transition">
+                            <BsHouse className="text-3xl text-blue-500" />
+                            <div>
+                                <p className="text-gray-500">Property ID:</p>
+                                <p className="font-semibold">{house.house_id}</p>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-4 p-4 border rounded-lg hover:shadow-md transition">
+                            <MdBed className="text-3xl text-blue-500" />
+                            <div>
+                                <p className="text-gray-500">Bedrooms:</p>
+                                <p className="font-semibold">{house_details.bedrooms}</p>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-4 p-4 border rounded-lg hover:shadow-md transition">
+                            <GiSettingsKnobs  className="text-3xl text-blue-500" />
+                            <div>
+                                <p className="text-gray-500">Types:</p>
+                                <p className="font-semibold">{house_details.type}</p>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-4 p-4 border rounded-lg hover:shadow-md transition">
+                            <BsRulers className="text-3xl text-blue-500" />
+                            <div>
+                                <p className="text-gray-500">Size:</p>
+                                <p className="font-semibold">{house_details.size} Sqft</p>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-4 p-4 border rounded-lg hover:shadow-md transition">
+                            <BsHouse className="text-3xl text-blue-500" />
+                            <div>
+                                <p className="text-gray-500">Property ID:</p>
+                                <p className="font-semibold">{house.house_id}</p>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-4 p-4 border rounded-lg hover:shadow-md transition">
+                            <MdBed className="text-3xl text-blue-500" />
+                            <div>
+                                <p className="text-gray-500">Bedrooms:</p>
+                                <p className="font-semibold">{house_details.bedrooms}</p>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-4 p-4 border rounded-lg hover:shadow-md transition">
+                            <MdBathtub className="text-3xl text-blue-500" />
+                            <div>
+                                <p className="text-gray-500">Bathrooms:</p>
+                                <p className="font-semibold">{house_details.bathrooms}</p>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-4 p-4 border rounded-lg hover:shadow-md transition">
+                            <BsRulers className="text-3xl text-blue-500" />
+                            <div>
+                                <p className="text-gray-500">Size:</p>
+                                <p className="font-semibold">{house_details.size} Sqft</p>
+                            </div>
+                        </div>
+
                     </div>
-                </div>
-                <div className="flex items-center gap-4 p-4 border rounded-lg hover:shadow-md transition">
-                    <MdBed className="text-3xl text-blue-500" />
-                    <div>
-                        <p className="text-gray-500">Bedrooms:</p>
-                        <p className="font-semibold">{house_details.bedrooms}</p>
-                    </div>
-                </div>
-                <div className="flex items-center gap-4 p-4 border rounded-lg hover:shadow-md transition">
-                    <MdBathtub className="text-3xl text-blue-500" />
-                    <div>
-                        <p className="text-gray-500">Bathrooms:</p>
-                        <p className="font-semibold">{house_details.bathrooms}</p>
-                    </div>
-                </div>
-                <div className="flex items-center gap-4 p-4 border rounded-lg hover:shadow-md transition">
-                    <BsRulers className="text-3xl text-blue-500" />
-                    <div>
-                        <p className="text-gray-500">Size:</p>
-                        <p className="font-semibold">{house_details.size} Sqft</p>
-                    </div>
+
+
                 </div>
             </div>
 
