@@ -47,11 +47,8 @@ export default function AdditionalInfo() {
 
                     {/* Rendering components */}
 
-                    <SelectRadio
-                        label="Garages"
-                        placeholder="Garages?"
-                        options={["Yes", "No"]}
-                    />
+
+                    <OnlyNumb label="Year Built*" placeholder="2018" />
 
                     <OnlyNumb label="Garages Size (sqft)*" placeholder="Enter garage's size in sqft" />
 

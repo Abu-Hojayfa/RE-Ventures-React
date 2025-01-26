@@ -122,7 +122,7 @@ export default function FrdProperties() {
 
 
             {/* Cards */}
-            <div className="w-4/5 mx-auto">
+            <div className="w-4/5 mx-auto mt-14">
                 <PropertyCard data={propertyData} isGrid={3}/>
             </div>
 

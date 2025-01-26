@@ -1,0 +1,17 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "192.168.31.41",
+            "port": 8080,
+            "driver": "MySQL",
+            "name": "daw",
+            "database": "finalone",
+            "username": "root"
+        }
+    ]
+}

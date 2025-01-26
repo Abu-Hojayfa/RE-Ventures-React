@@ -17,6 +17,7 @@ import FAQ from "./components/faqs/Faqs";
 
 import Blog from "./components/blog/Blog";
 import Listing from "./components/listing/Listing";
+import Properties from "./components/properties/Properties";
 
 
 const App = () => {
@@ -44,6 +45,8 @@ const App = () => {
         <Route path="/servicepolicy" element={<ServicePolicy />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/listing" element={<Listing />} />
+
+        <Route path="/property/:id" element={<Properties/>} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>
