@@ -11,6 +11,7 @@ import NotFound from "./components/NotFound/NotFound";
 import ContactUs from "./components/contactus/ContactUs";
 import AboutUs from "./components/aboutus/AboutUs";
 import ServicePolicy from "./components/servicepolicy/ServicePolicy";
+import BlogDetails from "./components/blog/BlogDetails";
 
 
 import FAQ from "./components/faqs/Faqs";
@@ -47,6 +48,7 @@ const App = () => {
         <Route path="/listing" element={<Listing />} />
 
         <Route path="/property/:id" element={<Properties/>} />
+        <Route path="/blog/:blogId" element={<BlogDetails />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>

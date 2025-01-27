@@ -1,94 +1,58 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropertyCard from "./PropertyCard";
-import img from "../../assests/service/buy.jpg"
 
 const selectbtnstyle =
     "btn font-semibold text-sm my-1 py-1 h-auto min-h-2 border-[#1563DF] rounded-3xl hover:bg-[#1563DF] hover:text-white";
 
-const propertyTypes = ["viewAll", "apartment", "villa", "house", "office"]; // Dynamic list of property types
-
-
-
-const propertyData = [
-    {
-        title: "Lakeview Haven, Lake Tahoe",
-        address: "145 Brooklyn Ave, California, New York",
-        image: img, // Replace with actual image URLs
-        beds: 3,
-        baths: 2,
-        sqft: 1150,
-        price: "750,000",
-        ownerName: "Mr. Car Man",
-        ownerImage: "https://via.placeholder.com/50.png?text=Owner", // Replace with actual owner image URLs
-        status: "Rent"
-    },
-    {
-        title: "Modern Downtown Condo",
-        address: "10th Avenue, Seattle, Washington",
-        image: img,
-        beds: 2,
-        baths: 1,
-        sqft: 900,
-        price: "500,000",
-        ownerName: "Ms. Jane Doe",
-        ownerImage: "https://via.placeholder.com/50.png?text=Owner",
-        status: "Sale"
-    },
-    {
-        title: "Luxury Villa, Miami Beach",
-        address: "Palm Drive, Miami Beach, Florida",
-        image: img,
-        beds: 5,
-        baths: 4,
-        sqft: 3200,
-        price: "2,500,000",
-        ownerName: "Mr. John Smith",
-        ownerImage: "https://via.placeholder.com/50.png?text=Owner",
-        status: "Sale"
-    },
-    {
-        title: "Suburban Family Home",
-        address: "Maple Street, Springfield, Illinois",
-        image: img,
-        beds: 4,
-        baths: 3,
-        sqft: 2100,
-        price: "350,000",
-        ownerName: "Mrs. Emily Rose",
-        ownerImage: "https://via.placeholder.com/50.png?text=Owner",
-        status: "Rent"
-    },
-    {
-        title: "Executive Office Space",
-        address: "Downtown, Los Angeles, California",
-        image: img,
-        beds: 0, // No beds for office spaces
-        baths: 2,
-        sqft: 5000,
-        price: "1,200,000",
-        ownerName: "Mr. Mark Wilson",
-        ownerImage: "https://via.placeholder.com/50.png?text=Owner",
-        status: "Sale"
-    },
-    {
-        title: "Cozy Mountain Cabin",
-        address: "Aspen, Colorado",
-        image: img,
-        beds: 2,
-        baths: 1,
-        sqft: 800,
-        price: "450,000",
-        ownerName: "Ms. Sarah Connor",
-        ownerImage: "https://via.placeholder.com/50.png?text=Owner",
-        status: "Rent"
-    },
-];
-
-
-
+const propertyTypes = ["viewAll", "Apartment", "Villa", "House", "Office"]; // Dynamic list of property types
 
 export default function FrdProperties() {
     const [isActive, setIsActive] = useState("viewAll");
+    const [propertyData, setPropertyData] = useState([]); // State to hold property data
+    const [filteredProperties, setFilteredProperties] = useState([]); // State to hold filtered properties
+    const [loading, setLoading] = useState(true); // State for loading status
+    const [error, setError] = useState(""); // State for error handling
+
+    // Fetch all property data initially (when isActive is "viewAll")
+    const fetchPropertyData = async () => {
+        setLoading(true); // Set loading to true before making the request
+        try {
+            const response = await fetch("http://localhost:8080/house/propertyDetails");
+            if (!response.ok) {
+                throw new Error("Error fetching data");
+            }
+            const data = await response.json();
+            setPropertyData(data); // Set all properties data
+            setFilteredProperties(data); // Set all properties initially as filtered
+        } catch (err) {
+            setError(err.message); // Handle error
+        } finally {
+            setLoading(false); // Set loading to false after fetching is complete
+        }
+    };
+
+    // Effect to fetch property data once when the component mounts
+    useEffect(() => {
+        fetchPropertyData(); // Fetch data for "viewAll" on mount
+    }, []); // Empty dependency array means this will only run once when the component mounts
+
+    // Filter properties when the selected type changes
+    useEffect(() => {
+        if (isActive === "viewAll") {
+            setFilteredProperties(propertyData); // Show all properties
+        } else {
+            const filtered = propertyData.filter(property =>
+                property.house_details.type === isActive
+            );
+            setFilteredProperties(filtered); // Show only the filtered properties
+        }
+    }, [isActive, propertyData]); // Re-run when isActive or propertyData changes
+
+    // Show loading text if still loading or error if there's an issue
+    if (loading) return <p>Loading properties...</p>;
+    if (error) return <p>Error: {error}</p>;
+
+    console.log(filteredProperties); // Check the filtered data
 
     return (
         <div className="w-5/6 m-auto my-16 mt-24">
@@ -119,13 +83,11 @@ export default function FrdProperties() {
                 ))}
             </div>
 
-
-
-            {/* Cards */}
+            {/* Cards Section */}
             <div className="w-4/5 mx-auto mt-14">
-                <PropertyCard data={propertyData} isGrid={3}/>
+                {/* Pass the filtered property data to the PropertyCard */}
+                <PropertyCard data={filteredProperties} isGrid={3} isTotal={false} />
             </div>
-
         </div>
     );
 }
